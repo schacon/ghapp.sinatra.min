@@ -23,6 +23,10 @@ Basically, to get this app running on Heroku, for instance, you will want to:
 
         https://github.com/account/applications/new
 
+It should look something like this:
+
+![OAuth application screen](https://img.skitch.com/20110621-mcyq6hjrn3c2mdk6629t23fh2m.png)
+
 * Set your Client Secret and Client ID as environment values in your Heroku instance
 
         $ heroku config:add GITHUB_CLIENT_SECRET=....
