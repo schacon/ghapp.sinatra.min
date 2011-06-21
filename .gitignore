@@ -1,0 +1,6 @@
+coverage
+.bundle
+pkg
+.DS_Store
+tmp
+.powrc
