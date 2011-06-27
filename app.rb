@@ -21,8 +21,6 @@ class MinApp < Sinatra::Base
   # [oa]: http://developer.github.com/v3/oauth/
   #
   set :github_options, {
-    :secret    => ENV['GITHUB_CLIENT_SECRET'],
-    :client_id => ENV['GITHUB_CLIENT_ID'],
     :scopes    => 'user'
   }
 
