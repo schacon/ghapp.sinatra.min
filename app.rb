@@ -21,8 +21,6 @@ class MinApp < Sinatra::Base
   # [oa]: http://developer.github.com/v3/oauth/
   #
   set :github_options, {
-    :secret    => ENV['GITHUB_CLIENT_SECRET'],
-    :client_id => ENV['GITHUB_CLIENT_ID'],
     :scopes    => 'user'
   }
 
@@ -32,7 +30,7 @@ class MinApp < Sinatra::Base
   # redirect them to the main application method, otherwise we show them
   # some sort of login screen
   get '/' do
-    if github_user
+    if authenticated?
       redirect '/app'
     else
       erb :index
