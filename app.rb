@@ -32,7 +32,7 @@ class MinApp < Sinatra::Base
   # redirect them to the main application method, otherwise we show them
   # some sort of login screen
   get '/' do
-    if github_user
+    if authenticated?
       redirect '/app'
     else
       erb :index
